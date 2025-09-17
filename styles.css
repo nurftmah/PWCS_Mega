@@ -157,6 +157,12 @@
             display: none;
         }
 
+        .nav .nav-link{
+            display: flex;
+            justify-content: space-between;
+        }
+
+
         @media screen and (max-width: 500px){
             .container{
                 width: 70%;
@@ -182,17 +188,17 @@
                 display: flex;
             }
 
-            .nav ul{
+            .nav .nav-link{
                 display: none;
             }
 
-            .nav ul{
-                display: none;
-            }
-
-            #nav-toggle:checked + label + ul{
+            #nav-toggle:checked + label + .nav-link{
+                display: flex;
+                flex-direction: column;
+               ul{
                 display: flex;
                 flex-direction: column;
                 margin-left: -5px;
+               }
             }
         }
